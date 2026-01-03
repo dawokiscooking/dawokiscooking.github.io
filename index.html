@@ -1,40 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>dawokiscooking's projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Browser</title>
     <style>
         body {
+            background-color: #1c1f2b; /* Dark background */
+            color: #d0d9e0; /* Light text color */
             font-family: Arial, sans-serif;
-            background: #111;
-            color: white;
-            margin: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        .project {
-            background: #222;
-            padding: 20px;
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #4a90e2; /* Blue theme */
+            font-size: 3rem;
             margin-bottom: 20px;
-            border-radius: 10px;
         }
-        a {
-            color: #4deeea;
+
+        .search-bar {
+            background-color: #2d3546; /* Darker background for input */
+            border: 2px solid #4a90e2; /* Blue border */
+            padding: 10px;
+            width: 400px;
+            font-size: 1.2rem;
+            color: #d0d9e0; /* Light text in input */
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .search-bar:focus {
+            border-color: #a1c4e5; /* Lighter blue when focused */
+        }
+
+        .search-button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .search-button:hover {
+            background-color: #3877c1;
         }
     </style>
 </head>
 <body>
-    <h1>My Java Projects</h1>
-    <p>welcome to my low effort portfolio of my java projects</p>
-
-    <div class="project">
-        <h2>Legion</h2>
-        <p>Optimized Minecraft PvP practice core i'm making for my Minecraft server.</p>
-        <a href="https://github.com/dawokiscooking/Legion">View on GitHub</a>
+    <div class="container">
+        <h1>Welcome to Max Browser</h1>
+        <form action="https://www.google.com/search" method="get" target="_blank">
+            <input type="text" name="q" class="search-bar" placeholder="Search the web..." required>
+            <button type="submit" class="search-button">Search</button>
+        </form>
     </div>
-
-    <div class="project">
-        <h2>BetterActionBarAPI</h2>
-        <p>A fork of the old ActionBarAPI by ConnorLinfoot.</p>
-        <a href="https://github.com/dawokiscooking/BetterActionBarAPI">View on GitHub</a>
-    </div>
-
 </body>
 </html>
