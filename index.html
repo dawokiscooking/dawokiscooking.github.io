@@ -5,55 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Max Browser</title>
     <style>
+        /* Base Styles */
         body {
             background-color: #1c1f2b; /* Dark background */
-            color: #d0d9e0; /* Light text color */
-            font-family: Arial, sans-serif;
+            color: #d0d9e0; /* Light text */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            overflow: hidden;
+            animation: fadeIn 1s ease-out;
         }
 
         .container {
             text-align: center;
+            animation: slideUp 1s ease-out;
         }
 
         h1 {
             color: #4a90e2; /* Blue theme */
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 20px;
+            letter-spacing: 2px;
+            opacity: 0;
+            animation: fadeInText 1s ease-in-out forwards 0.2s;
         }
 
+        /* Search Bar Styles */
         .search-bar {
-            background-color: #2d3546; /* Darker background for input */
-            border: 2px solid #4a90e2; /* Blue border */
-            padding: 10px;
-            width: 400px;
+            background-color: #2d3546;
+            border: 2px solid #4a90e2;
+            border-radius: 25px;
+            padding: 15px 20px;
+            width: 100%;
+            max-width: 450px;
             font-size: 1.2rem;
-            color: #d0d9e0; /* Light text in input */
-            border-radius: 5px;
+            color: #d0d9e0;
+            transition: all 0.3s ease;
             outline: none;
         }
 
+        /* Animation for the search bar when focused */
         .search-bar:focus {
-            border-color: #a1c4e5; /* Lighter blue when focused */
+            border-color: #a1c4e5;
+            box-shadow: 0 0 10px rgba(74, 144, 226, 0.7);
         }
 
+        /* Submit Button Styles */
         .search-button {
             background-color: #4a90e2;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-size: 1.1rem;
-            border-radius: 5px;
+            border-radius: 25px;
             cursor: pointer;
             margin-top: 15px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            outline: none;
         }
 
+        /* Hover effect for the search button */
         .search-button:hover {
             background-color: #3877c1;
+            transform: translateY(-2px);
+        }
+
+        /* Hover effect for the search button (active) */
+        .search-button:active {
+            transform: translateY(2px);
+        }
+
+        /* Loading Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
